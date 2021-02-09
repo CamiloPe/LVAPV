@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace LVAPV07
 {
-    public partial class FrmDos : Form
+    public partial class FrmTres : Form
     {
-        public FrmDos()
+        public FrmTres()
         {
             InitializeComponent();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnLlamarFormaDos_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            FrmTres frmTres = new FrmTres();
-            frmTres.Show();
+            FrmDos frmDos = new FrmDos();
+            frmDos.Show();
         }
     }
 }

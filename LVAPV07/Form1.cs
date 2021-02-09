@@ -29,5 +29,11 @@ namespace LVAPV07
         {
             this.Close();
         }
+
+        private void btmLlamarFormaTres_Click(object sender, EventArgs e)
+        {
+            FrmTres frmtres = new FrmTres ();
+            frmtres.Show();
+        }
     }
 }

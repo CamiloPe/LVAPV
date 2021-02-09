@@ -32,6 +32,7 @@ namespace LVAPV07
             this.label1 = new System.Windows.Forms.Label();
             this.btnLlamarFormaDos = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btmLlamarFormaTres = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,11 +64,22 @@ namespace LVAPV07
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btmLlamarFormaTres
+            // 
+            this.btmLlamarFormaTres.Location = new System.Drawing.Point(329, 314);
+            this.btmLlamarFormaTres.Name = "btmLlamarFormaTres";
+            this.btmLlamarFormaTres.Size = new System.Drawing.Size(243, 23);
+            this.btmLlamarFormaTres.TabIndex = 4;
+            this.btmLlamarFormaTres.Text = "llamar a forma tres";
+            this.btmLlamarFormaTres.UseVisualStyleBackColor = true;
+            this.btmLlamarFormaTres.Click += new System.EventHandler(this.btmLlamarFormaTres_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btmLlamarFormaTres);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLlamarFormaDos);
             this.Controls.Add(this.label1);
@@ -83,6 +95,7 @@ namespace LVAPV07
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLlamarFormaDos;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btmLlamarFormaTres;
     }
 }
 
