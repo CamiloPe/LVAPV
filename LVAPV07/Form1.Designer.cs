@@ -31,6 +31,7 @@ namespace LVAPV07
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnLlamarFormaDos = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,11 +53,22 @@ namespace LVAPV07
             this.btnLlamarFormaDos.UseVisualStyleBackColor = true;
             this.btnLlamarFormaDos.Click += new System.EventHandler(this.btnLlamarFormaDos_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(131, 285);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLlamarFormaDos);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -70,6 +82,7 @@ namespace LVAPV07
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLlamarFormaDos;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
 
