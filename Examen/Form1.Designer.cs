@@ -34,11 +34,11 @@ namespace Examen
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.lblApellidoMaterno = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoFijo = new System.Windows.Forms.TextBox();
             this.lblTelefonoFijo = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoMobil = new System.Windows.Forms.TextBox();
             this.lblTelefonoMobil = new System.Windows.Forms.Label();
             this.grpGenero = new System.Windows.Forms.GroupBox();
             this.rdbMasculino = new System.Windows.Forms.RadioButton();
@@ -91,11 +91,11 @@ namespace Examen
             // 
             // grpDatosPersonales
             // 
-            this.grpDatosPersonales.Controls.Add(this.textBox3);
+            this.grpDatosPersonales.Controls.Add(this.txtTelefonoMobil);
             this.grpDatosPersonales.Controls.Add(this.lblTelefonoMobil);
-            this.grpDatosPersonales.Controls.Add(this.textBox2);
+            this.grpDatosPersonales.Controls.Add(this.txtTelefonoFijo);
             this.grpDatosPersonales.Controls.Add(this.lblTelefonoFijo);
-            this.grpDatosPersonales.Controls.Add(this.textBox1);
+            this.grpDatosPersonales.Controls.Add(this.txtApellidoMaterno);
             this.grpDatosPersonales.Controls.Add(this.lblApellidoMaterno);
             this.grpDatosPersonales.Controls.Add(this.txtApellidoPaterno);
             this.grpDatosPersonales.Controls.Add(this.lblApellidoPaterno);
@@ -140,12 +140,12 @@ namespace Examen
             this.lblApellidoPaterno.TabIndex = 3;
             this.lblApellidoPaterno.Text = "Apellido Paterno:";
             // 
-            // textBox1
+            // txtApellidoMaterno
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(149, 81);
+            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(400, 22);
+            this.txtApellidoMaterno.TabIndex = 6;
             // 
             // lblApellidoMaterno
             // 
@@ -156,12 +156,12 @@ namespace Examen
             this.lblApellidoMaterno.TabIndex = 5;
             this.lblApellidoMaterno.Text = "Apellido Materno:";
             // 
-            // textBox2
+            // txtTelefonoFijo
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(400, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtTelefonoFijo.Location = new System.Drawing.Point(149, 109);
+            this.txtTelefonoFijo.Name = "txtTelefonoFijo";
+            this.txtTelefonoFijo.Size = new System.Drawing.Size(400, 22);
+            this.txtTelefonoFijo.TabIndex = 8;
             // 
             // lblTelefonoFijo
             // 
@@ -172,12 +172,12 @@ namespace Examen
             this.lblTelefonoFijo.TabIndex = 7;
             this.lblTelefonoFijo.Text = "Télefono Fijo:";
             // 
-            // textBox3
+            // txtTelefonoMobil
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(400, 22);
-            this.textBox3.TabIndex = 10;
+            this.txtTelefonoMobil.Location = new System.Drawing.Point(149, 137);
+            this.txtTelefonoMobil.Name = "txtTelefonoMobil";
+            this.txtTelefonoMobil.Size = new System.Drawing.Size(400, 22);
+            this.txtTelefonoMobil.TabIndex = 10;
             // 
             // lblTelefonoMobil
             // 
@@ -647,11 +647,11 @@ namespace Examen
         #endregion
 
         private System.Windows.Forms.GroupBox grpDatosPersonales;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTelefonoMobil;
         private System.Windows.Forms.Label lblTelefonoMobil;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTelefonoFijo;
         private System.Windows.Forms.Label lblTelefonoFijo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.Label lblApellidoMaterno;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.Label lblApellidoPaterno;
