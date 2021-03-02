@@ -9,6 +9,7 @@ namespace juego
     {
         int velocidad;
         Personaje pollo;
+        Personaje planta;
 
         public frmJuego()
         {
@@ -18,8 +19,10 @@ namespace juego
             velocidad = 1;
             InitializeComponent();
             pollo = new Personaje();
-            pollo.
-
+            planta = new Personaje("planta", 100, 10, new Point(10, 10), new Size(10, 10));
+            //MessageBox.Show(planta.ToString());
+            planta.Velocidad = 2;
+            planta.AddVelocidad(-1);
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace juego
 
         private void frmJuego_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 'A')
+            if (e.KeyChar == 'A' || e.KeyChar == 'a')
             {
                 
             }

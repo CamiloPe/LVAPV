@@ -160,6 +160,7 @@ namespace juego
             this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.btnIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "frmJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";

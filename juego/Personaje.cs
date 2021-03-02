@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace juego
 {
@@ -41,7 +42,7 @@ namespace juego
         public int Velocidad
         {
             get { return this.velocidad; }
-            set { this.velocidad = value; }
+            set { this.velocidad = (1 < value && value <= 10) ? value : this.vida; }
         }
         public Point Posicion
         {
@@ -56,6 +57,9 @@ namespace juego
         #endregion
 
         #region metodos
+        #region constructores
+        
+        //constructor por defecto
         //el metodo construntor no regresa nada de preferencia se usa el atributo
         public Personaje()
         {
@@ -65,6 +69,68 @@ namespace juego
             this.posicion = new Point(0, 0);
             this.tamanio = new Size(100, 100);
         }
+        //constructor sobrecargado
+        // ctor tab tab para crear rapido
+        public Personaje(string nombre, int vida, int velocidad)
+        {
+            this.nombre = nombre;
+            this.vida = vida;
+            this.velocidad = velocidad;
+            this.posicion = new Point(0, 0);
+            this.tamanio = new Size(100, 100);
+        }
+
+        public Personaje(string nombre, int vida, int velocidad, Point posicion, Size tamanio)
+        {
+            this.nombre = nombre;
+            this.vida = vida;
+            this.velocidad = velocidad;
+            this.posicion = posicion;
+            this.tamanio = tamanio;
+        }
+        #endregion
+        //sobreescritura
+
+        #region metodos genericos
+        public override string ToString()
+        {
+            return $"nombre de personaje:{this.Nombre}-\nvida:{this.Vida}-\nvelocidad:{this.Velocidad}-\nposicion:{this.Posicion}-\ntamaño:{this.Tamanio}";
+        }
+
+        public void AgregarVelocidad(int velocidad)
+        {
+            if (velocidad > 0 && this.velocidad + velocidad <= 10)
+            {
+                this.velocidad += velocidad;
+            }
+            else if (velocidad < 0 && this.velocidad - velocidad > 0)
+            {
+                this.velocidad += velocidad;
+            }
+        }
+
+        public void Mover (char tecla)
+        {
+            if(tecla == 'a' || tecla == 'A')
+            {
+                this.Posicion = new Point(this.Posicion.X - 1, this.Posicion.Y) ;
+            }
+            if (tecla == 'd' || tecla == 'D')
+            {
+                this.Posicion = new Point(this.Posicion.X + 1, this.Posicion.Y);
+            }
+            if (tecla == 's' || tecla == 'S')
+            {
+                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y + 1);
+            }
+            if (tecla == 'w' || tecla == 'W')
+            {
+                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y - 1);
+            }
+        }
+        #endregion
+
+
 
         #endregion
     }
