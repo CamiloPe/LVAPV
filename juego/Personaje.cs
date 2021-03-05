@@ -12,10 +12,17 @@ namespace juego
         private Size tamanio;
         private int velocidad;
         private string nombre;
+        private string fileName;
         private int vida;
+        private Image sprite;
         #endregion
 
         #region propiedades
+        public Image Sprite
+        {
+            get { return this.sprite; }
+            set { this.sprite = value;  }
+        }
         public int Vida 
         { 
             get { return this.vida; }
@@ -38,6 +45,11 @@ namespace juego
         {
             get { return this.nombre; }
             set { this.nombre = value; }
+        }
+        public string FileName
+        {
+            get { return this.fileName; }
+            set { this.fileName = value; }
         }
         public int Velocidad
         {
@@ -67,7 +79,9 @@ namespace juego
             this.vida = 100;
             this.velocidad = 10;
             this.posicion = new Point(0, 0);
-            this.tamanio = new Size(100, 100);
+            this.tamanio = new Size(200, 200);
+            this.FileName = @"C:\Users\camil\Desktop\proyectos juegos\godot plataform 1\FB pirata\\pollo.png";
+            this.Sprite = Bitmap.FromFile(this.FileName);
         }
         //constructor sobrecargado
         // ctor tab tab para crear rapido
@@ -113,19 +127,19 @@ namespace juego
         {
             if(tecla == 'a' || tecla == 'A')
             {
-                this.Posicion = new Point(this.Posicion.X - 1, this.Posicion.Y) ;
+                this.Posicion = new Point(this.Posicion.X - velocidad, this.Posicion.Y) ;
             }
             if (tecla == 'd' || tecla == 'D')
             {
-                this.Posicion = new Point(this.Posicion.X + 1, this.Posicion.Y);
+                this.Posicion = new Point(this.Posicion.X + velocidad, this.Posicion.Y);
             }
             if (tecla == 's' || tecla == 'S')
             {
-                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y + 1);
+                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y + velocidad);
             }
             if (tecla == 'w' || tecla == 'W')
             {
-                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y - 1);
+                this.Posicion = new Point(this.Posicion.X, this.Posicion.Y - velocidad);
             }
         }
         #endregion

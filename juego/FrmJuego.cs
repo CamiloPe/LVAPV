@@ -16,13 +16,14 @@ namespace juego
             //cubo morado es un metodo 
             //cubo azul es un atributo
             //llave inglesa propiedad
-            velocidad = 1;
+            
             InitializeComponent();
-            pollo = new Personaje();
-            planta = new Personaje("planta", 100, 10, new Point(10, 10), new Size(10, 10));
+            velocidad = 10;
+            //pollo = new Personaje("pollo", 100, 10, new Point(10, 10), new Size(10, 10));
+            //planta = new Personaje("planta", 100, 10, new Point(10, 10), new Size(10, 10));
             //MessageBox.Show(planta.ToString());
-            planta.Velocidad = 2;
-            planta.AddVelocidad(-1);
+            //planta.Velocidad = 2;
+            //planta.AgregarVelocidad(-1);
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
@@ -69,19 +70,25 @@ namespace juego
 
         private void frmJuego_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 'A' || e.KeyChar == 'a')
+            pollo.Mover(e.KeyChar);
+            pctPlayer.Location = pollo.Posicion;
+            if(pctPlayer.Bounds.IntersectsWith(pctEnemigo.Bounds))
             {
-                
+                MessageBox.Show("kaboom");
             }
         }
 
         private void izquierda ()
         {
-            if (pctPlayer.Location.X - velocidad > 0)
-            {
-                pctPlayer.Location = new Point(pctPlayer.Location.X - velocidad, pctPlayer.Location.Y);
-            }
+            
         }
 
+        private void frmJuego_Load(object sender, EventArgs e)
+        {
+            pollo = new Personaje();
+            pctPlayer.Location = pollo.Posicion;
+            pctPlayer.Size = pollo.Tamanio;
+            pctPlayer.Image = pollo.Sprite;
+        }
     }
 }

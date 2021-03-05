@@ -47,7 +47,7 @@ namespace juego
             // 
             // btnIzquierda
             // 
-            this.btnIzquierda.Location = new System.Drawing.Point(533, 370);
+            this.btnIzquierda.Location = new System.Drawing.Point(848, 551);
             this.btnIzquierda.Name = "btnIzquierda";
             this.btnIzquierda.Size = new System.Drawing.Size(75, 23);
             this.btnIzquierda.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace juego
             // 
             // btnDerecha
             // 
-            this.btnDerecha.Location = new System.Drawing.Point(695, 370);
+            this.btnDerecha.Location = new System.Drawing.Point(1010, 551);
             this.btnDerecha.Name = "btnDerecha";
             this.btnDerecha.Size = new System.Drawing.Size(75, 23);
             this.btnDerecha.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace juego
             // 
             // btnArriba
             // 
-            this.btnArriba.Location = new System.Drawing.Point(614, 341);
+            this.btnArriba.Location = new System.Drawing.Point(929, 522);
             this.btnArriba.Name = "btnArriba";
             this.btnArriba.Size = new System.Drawing.Size(75, 23);
             this.btnArriba.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace juego
             // 
             // btnAbajo
             // 
-            this.btnAbajo.Location = new System.Drawing.Point(614, 370);
+            this.btnAbajo.Location = new System.Drawing.Point(929, 551);
             this.btnAbajo.Name = "btnAbajo";
             this.btnAbajo.Size = new System.Drawing.Size(75, 23);
             this.btnAbajo.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace juego
             // 
             // nmrVelocidadPlayer
             // 
-            this.nmrVelocidadPlayer.Location = new System.Drawing.Point(533, 399);
+            this.nmrVelocidadPlayer.Location = new System.Drawing.Point(848, 580);
             this.nmrVelocidadPlayer.Maximum = new decimal(new int[] {
             10,
             0,
@@ -109,7 +109,7 @@ namespace juego
             // 
             // trcVelocidad
             // 
-            this.trcVelocidad.Location = new System.Drawing.Point(423, 365);
+            this.trcVelocidad.Location = new System.Drawing.Point(738, 546);
             this.trcVelocidad.Minimum = 1;
             this.trcVelocidad.Name = "trcVelocidad";
             this.trcVelocidad.Size = new System.Drawing.Size(104, 56);
@@ -120,7 +120,7 @@ namespace juego
             // pctEnemigo
             // 
             this.pctEnemigo.Image = global::juego.Properties.Resources.pinshi_flama_mrda;
-            this.pctEnemigo.Location = new System.Drawing.Point(207, 127);
+            this.pctEnemigo.Location = new System.Drawing.Point(425, 354);
             this.pctEnemigo.Name = "pctEnemigo";
             this.pctEnemigo.Size = new System.Drawing.Size(145, 190);
             this.pctEnemigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +130,7 @@ namespace juego
             // pctPlayer
             // 
             this.pctPlayer.Image = global::juego.Properties.Resources.polloimagen;
-            this.pctPlayer.Location = new System.Drawing.Point(30, 55);
+            this.pctPlayer.Location = new System.Drawing.Point(232, 120);
             this.pctPlayer.Name = "pctPlayer";
             this.pctPlayer.Size = new System.Drawing.Size(100, 115);
             this.pctPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +143,7 @@ namespace juego
             this.grpCampo.Controls.Add(this.pctEnemigo);
             this.grpCampo.Location = new System.Drawing.Point(23, 30);
             this.grpCampo.Name = "grpCampo";
-            this.grpCampo.Size = new System.Drawing.Size(394, 408);
+            this.grpCampo.Size = new System.Drawing.Size(629, 572);
             this.grpCampo.TabIndex = 8;
             this.grpCampo.TabStop = false;
             // 
@@ -151,7 +151,7 @@ namespace juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1111, 629);
             this.Controls.Add(this.grpCampo);
             this.Controls.Add(this.trcVelocidad);
             this.Controls.Add(this.nmrVelocidadPlayer);
@@ -164,6 +164,7 @@ namespace juego
             this.Name = "frmJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";
+            this.Load += new System.EventHandler(this.frmJuego_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmJuego_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.nmrVelocidadPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trcVelocidad)).EndInit();
