@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen", "Examen\Examen.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "juego", "juego\juego.csproj", "{40857E5C-23C5-4787-9A46-22C02B84E563}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pollo", "pollo\pollo.csproj", "{850D2474-E453-45A0-91CF-DB8C7E81340E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{40857E5C-23C5-4787-9A46-22C02B84E563}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40857E5C-23C5-4787-9A46-22C02B84E563}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40857E5C-23C5-4787-9A46-22C02B84E563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{850D2474-E453-45A0-91CF-DB8C7E81340E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850D2474-E453-45A0-91CF-DB8C7E81340E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{850D2474-E453-45A0-91CF-DB8C7E81340E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{850D2474-E453-45A0-91CF-DB8C7E81340E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

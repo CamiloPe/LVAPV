@@ -6,6 +6,8 @@ namespace juego
     public class Personaje
     {
         #region atributos
+        private int posicionFrame;
+        private int totalFrame;
         //qui van los atributos 
         private Point posicion;
         //los atributos de preferencia son provados
@@ -15,6 +17,7 @@ namespace juego
         private string fileName;
         private int vida;
         private Image sprite;
+        
         #endregion
 
         #region propiedades
@@ -22,6 +25,20 @@ namespace juego
         {
             get { return this.sprite; }
             set { this.sprite = value;  }
+        }
+        public int PosicionFrame
+        {
+            get { return this.vida; }
+            //signo de interrogacion es el if y los dos puntos es el else
+
+            set { this.posicionFrame = (0 <= value && value <= totalFrame) ? value : this.posicionFrame; }
+        }
+        public int TotalFrame
+        {
+            get { return this.totalFrame; }
+            //signo de interrogacion es el if y los dos puntos es el else
+
+            set { this.totalFrame =  value ; }
         }
         public int Vida 
         { 
@@ -79,28 +96,32 @@ namespace juego
             this.vida = 100;
             this.velocidad = 10;
             this.posicion = new Point(0, 0);
-            this.tamanio = new Size(200, 200);
-            this.FileName = @"C:\Users\camil\Desktop\proyectos juegos\godot plataform 1\FB pirata\\pollo.png";
+            this.tamanio = new Size(128, 16);
+            this.FileName = @"C:\\Users\\camil\\Desktop\\Shcuela\\LVA\\RepositorioUno\\LVAPV\\slime1.png";
             this.Sprite = Bitmap.FromFile(this.FileName);
         }
         //constructor sobrecargado
         // ctor tab tab para crear rapido
-        public Personaje(string nombre, int vida, int velocidad)
+        public Personaje(string nombre, string fileName, int vida, int velocidad)
         {
             this.nombre = nombre;
             this.vida = vida;
             this.velocidad = velocidad;
             this.posicion = new Point(0, 0);
             this.tamanio = new Size(100, 100);
+            this.FileName = fileName;
+            this.Sprite = Bitmap.FromFile(this.FileName);
         }
 
-        public Personaje(string nombre, int vida, int velocidad, Point posicion, Size tamanio)
+        public Personaje(string nombre, string fileName, int vida, int velocidad, Point posicion, Size tamanio)
         {
             this.nombre = nombre;
             this.vida = vida;
             this.velocidad = velocidad;
             this.posicion = posicion;
             this.tamanio = tamanio;
+            this.FileName = fileName;
+            this.Sprite = Bitmap.FromFile(this.FileName);
         }
         #endregion
         //sobreescritura
@@ -141,6 +162,22 @@ namespace juego
             {
                 this.Posicion = new Point(this.Posicion.X, this.Posicion.Y - velocidad);
             }
+        }
+        public Image GetFrame(int index)
+        {
+            if (!(index >= 0 && index < 40))
+            {
+                index = 0;
+            }
+            Image frame = new Bitmap(tamanio.Width, tamanio.Height);
+            using(Graphics g = Graphics.FromImage(frame))
+            {
+                g.DrawImage(Sprite, 
+                    new Rectangle(0,0, tamanio.Width, tamanio.Height), 
+                    new Rectangle(index * tamanio.Width, 0, tamanio.Width, tamanio.Height), 
+                    GraphicsUnit.Pixel);
+            }
+            return frame;
         }
         #endregion
 

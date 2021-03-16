@@ -29,6 +29,7 @@ namespace juego
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnIzquierda = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
             this.btnArriba = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@ namespace juego
             this.pctEnemigo = new System.Windows.Forms.PictureBox();
             this.pctPlayer = new System.Windows.Forms.PictureBox();
             this.grpCampo = new System.Windows.Forms.GroupBox();
+            this.tmrPlayer = new System.Windows.Forms.Timer(this.components);
+            this.tmrEnemigo = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nmrVelocidadPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trcVelocidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEnemigo)).BeginInit();
@@ -133,9 +136,9 @@ namespace juego
             this.pctPlayer.Location = new System.Drawing.Point(232, 120);
             this.pctPlayer.Name = "pctPlayer";
             this.pctPlayer.Size = new System.Drawing.Size(100, 115);
-            this.pctPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctPlayer.TabIndex = 0;
             this.pctPlayer.TabStop = false;
+            this.pctPlayer.Click += new System.EventHandler(this.pctPlayer_Click);
             // 
             // grpCampo
             // 
@@ -146,6 +149,16 @@ namespace juego
             this.grpCampo.Size = new System.Drawing.Size(629, 572);
             this.grpCampo.TabIndex = 8;
             this.grpCampo.TabStop = false;
+            // 
+            // tmrPlayer
+            // 
+            this.tmrPlayer.Enabled = true;
+            this.tmrPlayer.Tick += new System.EventHandler(this.tmrPlayer_Tick);
+            // 
+            // tmrEnemigo
+            // 
+            this.tmrEnemigo.Interval = 500;
+            this.tmrEnemigo.Tick += new System.EventHandler(this.tmrEnemigo_Tick);
             // 
             // frmJuego
             // 
@@ -187,6 +200,8 @@ namespace juego
         private System.Windows.Forms.TrackBar trcVelocidad;
         private System.Windows.Forms.PictureBox pctEnemigo;
         private System.Windows.Forms.GroupBox grpCampo;
+        private System.Windows.Forms.Timer tmrPlayer;
+        private System.Windows.Forms.Timer tmrEnemigo;
     }
 }
 
