@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pollo
@@ -30,7 +24,7 @@ namespace pollo
             pctAbajo.Location = new Point(270, -173 - distancia);
             lblPuntaje.Text = "0";
         }
-    
+
 
         private void tmrAnimacion_Tick(object sender, EventArgs e)
         {
@@ -43,7 +37,7 @@ namespace pollo
             if ((contMovimientos > cantMovimientos / 2) && (contMovimientos <= cantMovimientos * 2))
             {
                 pctjugador.Image = Properties.Resources.pollow1;
-                contMovimientos++;     
+                contMovimientos++;
             }
             contMovimientos = (contMovimientos > cantMovimientos) ? 0 : contMovimientos;
 
@@ -57,13 +51,13 @@ namespace pollo
             }
             else
             {
-                y = y+5;
+                y = y + 5;
             }
 
             pctjugador.Location = new Point(pctjugador.Location.X, y);
 
-            if((pctjugador.Bounds.IntersectsWith(pctPiso.Bounds)) || 
-                (pctjugador.Bounds.IntersectsWith(pctArriba.Bounds)) || 
+            if ((pctjugador.Bounds.IntersectsWith(pctPiso.Bounds)) ||
+                (pctjugador.Bounds.IntersectsWith(pctArriba.Bounds)) ||
                 (pctjugador.Bounds.IntersectsWith(pctAbajo.Bounds)))
             {
                 IniciarJuego();
@@ -72,12 +66,12 @@ namespace pollo
             /*lblPuntaje.Location = new Point(pctjugador.Location.X + 30, pctjugador.Location.Y - 25);
             lblPuntaje.Text = (pctArriba.Location.X == pctjugador.Location.X) ? 
                 Convert.ToString((Convert.ToInt32(lblPuntaje.Text) + 1)).ToString() : lblPuntaje.Text;*/
-            
+
         }
 
         private void FrmJuego_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == Convert.ToChar(Keys.Space))
+            if (e.KeyChar == Convert.ToChar(Keys.Space))
             {
                 volar = true;
             }
