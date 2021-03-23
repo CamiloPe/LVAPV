@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "juego", "juego\juego.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pollo", "pollo\pollo.csproj", "{850D2474-E453-45A0-91CF-DB8C7E81340E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lva0008", "lva0008\lva0008.csproj", "{50A36C89-0263-4188-8F4E-581D8ED8B30D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPE301", "lva0008\CPE301.csproj", "{50A36C89-0263-4188-8F4E-581D8ED8B30D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

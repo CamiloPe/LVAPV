@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace lva0008
 {
-    public partial class Form1 : Form
+    public partial class FrmMetro : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public FrmMetro()
         {
             InitializeComponent();
         }
