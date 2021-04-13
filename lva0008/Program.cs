@@ -16,7 +16,7 @@ namespace lva0008
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMetro());
+            Application.Run(new FrmStudent());
         }
     }
 }
